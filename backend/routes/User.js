@@ -13,7 +13,6 @@ const signToken = (userId) => {
 	});
 };
 
-//get all users
 userRouter.get("/", passport.authenticate("jwt", {
 	session: false
 }), (req, res) => {
@@ -25,7 +24,6 @@ userRouter.get("/", passport.authenticate("jwt", {
 	}));
 });
 
-//Login in with user details endpoint
 userRouter.post("/login", passport.authenticate("local", {
 	session: false
 }), (req, res) => {
@@ -47,7 +45,6 @@ userRouter.post("/login", passport.authenticate("local", {
 	}
 });
 
-//logout out a user, and remove any cookies.
 userRouter.get("/logout", passport.authenticate("jwt", {
 	session: false
 }), (req, res) => {
@@ -61,7 +58,6 @@ userRouter.get("/logout", passport.authenticate("jwt", {
 	});
 });
 
-//check if user is already authenticated if page is closed.
 userRouter.get("/authenticated", passport.authenticate("jwt", {
 	session: false
 }), (req, res) => {

@@ -29,7 +29,7 @@ userRouter.post("/add", passport.authenticate("jwt", {
 userRouter.get("/", passport.authenticate("jwt", {
 	session: false
 }), (req, res) => {
-	Quiz.find().then((quizzes) => res.json(quizzes)).catch((err) => res.status(400).json({
+	Quiz.find().then((quiz) => res.json(quiz)).catch((err) => res.status(400).json({
 		message: {
 			messageBody: "ERROR:" + err,
 			messageError: true

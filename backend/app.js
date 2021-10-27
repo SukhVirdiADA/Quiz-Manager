@@ -18,10 +18,10 @@ mongoose.connect('mongodb://localhost:27017/quizmanager', {
 mongoose.set('useCreateIndex', true);
 
 const userRouter = require("./routes/User");
-const quizzesRouter = require("./routes/Quizzes");
+const quizRouter = require("./routes/Quiz");
 
 app.use("/user", userRouter);
-app.use("/quiz", quizzesRouter);
+app.use("/quiz", quizRouter);
 
 app.listen(port, () => {
 	console.log(`Server is running on port: ${port}`);
