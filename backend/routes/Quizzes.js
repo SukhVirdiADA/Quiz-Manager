@@ -5,7 +5,6 @@ const passportConfig = require("../passport");
 const JWT = require("jsonwebtoken");
 const Quiz = require("../models/Quiz");
 
-//add a quiz endpoint
 userRouter.post("/add", passport.authenticate("jwt", {
 	session: false
 }), (req, res) => {
@@ -27,7 +26,6 @@ userRouter.post("/add", passport.authenticate("jwt", {
 	}));
 });
 
-//get all quizzes endpoint
 userRouter.get("/", passport.authenticate("jwt", {
 	session: false
 }), (req, res) => {
@@ -39,7 +37,6 @@ userRouter.get("/", passport.authenticate("jwt", {
 	}));
 });
 
-//return a single quiz by using the quiz ID
 userRouter.get("/:id", passport.authenticate("jwt", {
 	session: false
 }), (req, res) => {
@@ -51,7 +48,6 @@ userRouter.get("/:id", passport.authenticate("jwt", {
 	}));
 });
 
-//delete a single quiz by using the quiz ID
 userRouter.delete("/:id", passport.authenticate("jwt", {
 	session: false
 }), (req, res) => {
@@ -63,7 +59,6 @@ userRouter.delete("/:id", passport.authenticate("jwt", {
 	}));
 });
 
-//find a quiz by ID and update quiz.
 userRouter.post("/update/:id", passport.authenticate("jwt", {
 	session: false
 }), (req, res) => {
