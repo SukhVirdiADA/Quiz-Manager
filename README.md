@@ -20,6 +20,4 @@ This application was created using the MERN technology stack to meet the project
 
 ## Github Repository
 
-```
-This repository has been uploaded to [GitHub](https://github.com/SukhVirdiADA/quiz-manager)
-```
+This repository has been uploaded to https://github.com/SukhVirdiADA/quiz-manager/
